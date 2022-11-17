@@ -14,7 +14,7 @@ const DarkLightToggleIconComponent = () => {
             toggleColorMode: () => {
                 const mode = state?.darkMode === 'light' ? 'dark' : 'light';
                 dispatch({ type: 'DARK_MODE', payload: mode });
-                // localStorage.setItem('mode', mode);
+                localStorage.setItem('mode', mode);
             },
         }),
         [dispatch, state?.darkMode],
